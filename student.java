@@ -1,43 +1,18 @@
-package audip;
-
+package collection;
+import java.util.*;
 public class student {
-final static String Institute_name="Dronacharya";
-private int rollno;
-private String Name;
-private int age;
-public int getRoll_no() {
-	return rollno;
-}
-public void setRoll_no(int roll_no) {
-	this.rollno = roll_no;
-}
-public String getName() {
-	return Name;
-}
-public void setName(String name) {
-	Name = name;
-}
-public int getAge() {
-	return age;
-}
-public void setAge(int age) {
-	this.age = age;
-}
-public static String getInstituteName() {
-	return Institute_name;
-}
-public student() {
-super ();
-}
+	public static void main (String args []) {
+		HashMap<Integer,String>
+		map =new HashMap<Integer,String>(); // creating hashmap
+		map.put(101,"Piyush");
+		map.put(102,"aman");
+		map.put(103,"ankit");
+		map.put(104,"bhavesh");
+		map.put(105,"lavi");
+		System.out.print("iteraing hashmap");
+		for(Map.Entry m:map.entrySet())){
+			System.out.println(m.getKey()+" "+m.getValue());
+		}
+	}
 
-public student(int roll_no, String name, int age) {
-	super();
-	this.rollno = roll_no;
-	Name = name;
-	this.age = age;
-}
-	@Override
-	public String toString() {
-		return "Student [rollno=" + rollno + ", name=" + Name + ", age=" + age + "]";
-}
 }
